@@ -105,5 +105,6 @@ print(r2_score(dtrain.get_label(),model.predict(dtrain)))
 # make predictions and save results
 y_pred = model.predict(dtest)
 
+# submissions i'm saving on ../output folder
 output = pd.DataFrame({'id': test['ID'].astype(np.int32), 'y': y_pred})
-output.to_csv('xgb_dimensions.csv', index=False)
+output.to_csv('../output/xgb_dimensions.csv', index=False)
